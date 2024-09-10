@@ -79,5 +79,5 @@ This project involves a detailed analysis of TellCo, a mobile service provider i
 **Design and Develop Dashboard**
 - Create a web-based dashboard using Streamlit.
 - Separate each page by task title (e.g., User Overview Analysis, User Engagement Analysis, Experience Analysis, Satisfaction Analysis).
-- Add relevant plots for each page to visualize data insights.
+- Add relevant plots for each page to visualize data insights
 
