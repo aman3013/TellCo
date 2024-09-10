@@ -11,4 +11,4 @@ scikit-learn
 utils 
 nbformat
 streamlit
-request
+requests
