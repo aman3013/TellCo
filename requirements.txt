@@ -1,0 +1,13 @@
+psycopg2
+python-dotenv
+pandas
+psycopg2-binary
+sqlalchemy
+openpyxl
+matplotlib
+seaborn
+plotly
+scikit-learn
+utils 
+nbformat
+streamlit
