@@ -1,9 +1,30 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import requests
+from io import StringIO
+
+# Function to download the data from Google Drive
+def download_data_from_google_drive(file_id, destination):
+    base_url = 'https://drive.google.com/uc?export=download'
+    url = f'{base_url}&id={file_id}'
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        with open(destination, 'wb') as f:
+            f.write(response.content)
+    else:
+        st.error("Failed to download the file. Check the file ID or your internet connection.")
+
+# File ID from the Google Drive link
+file_id = '10DTh6iUO7jNJDv-KUqbwF6C5foOKpPzy'
+data_file = 'telecom_user_satisfaction_data.csv'
+
+# Download the file
+download_data_from_google_drive(file_id, data_file)
 
 # Load the data
-df_merged = pd.read_csv('../data/telecom_user_satisfaction_dataa.csv')  # Replace with your actual data path
+df_merged = pd.read_csv(data_file)
 
 # Set page configuration
 st.set_page_config(page_title="Telecom User Analysis Dashboard", layout="wide")
